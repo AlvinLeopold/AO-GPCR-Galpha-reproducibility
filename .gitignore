@@ -1,0 +1,7 @@
+.DS_Store
+__pycache__/
+*.pyc
+.Rhistory
+.RData
+R2_computation/analysis/figure2_9series/reproduced/
+R2_computation/inputs/af2_reproduction_run/

@@ -1,0 +1,12 @@
+parameter	value	meaning
+pseudocount	0.1	Added only for log2-scale effect summaries on TPM/FPKM
+effect_abs_log2fc_cutoff	1	Minimum absolute log2 fold-change for supported processed-expression effect
+effect_fdr_cutoff	0.05	Benjamini-Hochberg threshold within matrix/contrast/time family
+detection_value_cutoff	0	Values greater than this are treated as detected
+potential_duplicate_gse	GSE253759	GSE215079-like parallel GEO record; retained but not treated as an independent biological replicate in conservative score
+tier1_min_baseline_gse	3	Minimum distinct GSEs with WT baseline detection for Tier 1 consideration
+tier1_min_induction_gse	2	Minimum distinct GSEs with supported WT induction effect for Tier 1 consideration
+tier1_min_induction_consistency	0.67	Minimum non-duplicate GSE direction consistency for Tier 1 consideration
+tier1_min_deseq_gse	2	Alternative Tier 1 route: supported DESeq2 candidate result in at least two GSEs
+tier2_min_baseline_gse	2	Minimum distinct GSEs with WT baseline detection for Tier 2 consideration
+tier2_min_induction_consistency	0.6	Minimum non-duplicate GSE direction consistency for the induction-based Tier 2 route

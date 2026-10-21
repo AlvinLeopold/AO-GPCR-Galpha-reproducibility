@@ -1,0 +1,16 @@
+parameter	value	meaning
+pseudocount	0.1	Pseudocount for log2 transformation of TPM/FPKM only
+fdr_cutoff	0.05	Benjamini-Hochberg threshold within each matrix and contrast
+abs_log2fc_cutoff	1	Effect-size threshold for strong candidate support
+min_replicates_per_group	2	Minimum biological replicates for a contrast to be tested
+count_min_total	10	Minimum total raw count across samples for DESeq2 testing
+count_min_samples	2	Minimum samples with a positive raw count
+duplicate_gse	GSE253759	Exact duplicate of GSE215079 candidate values; excluded as independent evidence
+duplicate_primary_gse	GSE215079	Primary record retained for AoAge2 evidence
+order_based_gse	GSE303416	Sample mapping remains order-based and conclusions are provisional
+time_series_matrices	GSE215079;GSE245014_Rab7;GSE245014_Vps35;GSE322548_TPM;GSE322548_counts	Matrices used for detailed time-response classification
+network_min_samples	15	Minimum sample count for exploratory WGCNA
+network_top_variable_genes	5000	Maximum variable genes retained for exploratory WGCNA
+network_min_module_size	30	Minimum WGCNA module size
+correlation_fdr_cutoff	0.05	Candidate-gene/module correlation FDR threshold
+panel_size	10	Maximum candidates retained in each condition-specific panel

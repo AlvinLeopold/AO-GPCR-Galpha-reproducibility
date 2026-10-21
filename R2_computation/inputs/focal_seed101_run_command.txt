@@ -1,0 +1,18 @@
+Focal AlphaFold2-Multimer seed sensitivity rerun, 2026-10-09
+
+The six input A3M files in inputs/focal_a3m are byte-identical to the corresponding
+archived seed-0 stage1 A3M files on the authors' workstation (verified with cmp).
+The rerun changed the random seed to 101 and kept the archived MSA, three
+AlphaFold2-Multimer v3 model weights, and three recycles. No template option
+was passed. The workstation used LocalColabFold 1.5.5, commit
+e8ebd9a612b9da5fe12bbbc09513d5c52a9af633.
+
+Run command (input and output paths are workstation paths):
+colabfold_batch --model-type alphafold2_multimer_v3 --num-models 3 \
+  --model-order 1,2,3 --num-recycle 3 --num-seeds 1 --random-seed 101 \
+  --rank multimer /home/alvin/ijms_r2_20261009/focal_input \
+  /home/alvin/ijms_r2_20261009/focal_seed101
+
+The resulting 18 score JSONs were extracted to inputs/af2_focal_seed101_scores.tsv.
+This is a stochastic sensitivity analysis on the same six MSAs; it is not an
+independent experimental replication or a calibration of biological coupling.
